@@ -1,18 +1,5 @@
 import streamlit as st
-import sys
-import subprocess
-
-# Function to install package if not present
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-# Try importing matplotlib and install if needed
-try:
-    import matplotlib.pyplot as plt
-except ImportError:
-    install("matplotlib")
-    import matplotlib.pyplot as plt
-
+import matplotlib.pyplot as plt
 import networkx as nx
 import matplotlib.animation as animation
 import io
